@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Magic_8_Ball" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="LIw-cd-ygc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYC-d1-znP">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="135"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask Me Anything" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyK-8z-l1X">
+                                                <rect key="frame" x="27.5" y="45.5" width="320.5" height="44.5"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="36"/>
+                                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="hyK-8z-l1X" firstAttribute="centerX" secondItem="CYC-d1-znP" secondAttribute="centerX" id="26A-Ud-Xca"/>
+                                            <constraint firstItem="hyK-8z-l1X" firstAttribute="centerY" secondItem="CYC-d1-znP" secondAttribute="centerY" id="hAV-eX-Zz4"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vdq-vo-pfh">
+                                        <rect key="frame" x="0.0" y="136" width="375" height="416.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CSe-Qf-CTl">
+                                                <rect key="frame" x="44" y="75" width="287" height="267"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="287" id="M8v-EG-Ibe"/>
+                                                    <constraint firstAttribute="height" constant="267" id="ShP-5Y-uEz"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="CSe-Qf-CTl" firstAttribute="centerY" secondItem="vdq-vo-pfh" secondAttribute="centerY" id="X6A-vu-pVr"/>
+                                            <constraint firstItem="CSe-Qf-CTl" firstAttribute="centerX" secondItem="vdq-vo-pfh" secondAttribute="centerX" id="uPL-jq-UMe"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K1j-Dy-SQO">
+                                        <rect key="frame" x="0.0" y="553.5" width="375" height="113.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Jm-u1-JpS">
+                                                <rect key="frame" x="142.5" y="24" width="90" height="65"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="JrI-Vj-yjO"/>
+                                                    <constraint firstAttribute="height" constant="65" id="kv4-8X-8J6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
+                                                <state key="normal" title="Ask">
+                                                    <color key="titleColor" red="0.0" green="0.6588235294" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="askButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hCa-vL-SIr"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="5Jm-u1-JpS" firstAttribute="centerY" secondItem="K1j-Dy-SQO" secondAttribute="centerY" id="2TS-h6-D1M"/>
+                                            <constraint firstItem="5Jm-u1-JpS" firstAttribute="centerX" secondItem="K1j-Dy-SQO" secondAttribute="centerX" id="Z6h-cW-HsW"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LIw-cd-ygc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ziv-YU-Dro"/>
+                            <constraint firstItem="LIw-cd-ygc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mFX-B7-S8D"/>
+                            <constraint firstAttribute="bottom" secondItem="LIw-cd-ygc" secondAttribute="bottom" id="ocn-j7-kf8"/>
+                            <constraint firstItem="LIw-cd-ygc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yNR-bX-G5r"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="ballImage" destination="CSe-Qf-CTl" id="F6z-sE-7ly"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="132.58928571428572"/>
+        </scene>
+    </scenes>
+</document>
